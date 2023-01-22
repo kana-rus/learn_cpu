@@ -6,11 +6,11 @@ import common.Consts._
 
 class Core extends Module {
     val io = IO(new Bundle {
-        // val imem = Flipped(new ImemportIO)
-        val imem = new Bundle {
-            val addr = Output(UInt(WORD_LEN.W))
-            val inst = Input(UInt(WORD_LEN.W))
-        }
+        val imem = Flipped(new ImemPortIO())
+        // val imem = new Bundle {
+        //     val addr = Output(UInt(WORD_LEN.W))
+        //     val inst = Input(UInt(WORD_LEN.W))
+        // }
 
         val exit = Output(Bool())
     })

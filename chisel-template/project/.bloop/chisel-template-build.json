@@ -202,7 +202,7 @@
         "platform": {
             "name": "jvm",
             "config": {
-                "home": "/home/kanarus/.jabba/jdk/openjdk@1.17.0",
+                "home": "/usr/lib/jvm/java-11-openjdk-amd64",
                 "options": [
                     "-Duser.dir=/home/kanarus/projects/learn_cpu/learning/chisel-template/project"
                 ]

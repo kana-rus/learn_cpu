@@ -5,7 +5,7 @@ import chisel3.util._
 import chisel3.util.experimental.loadMemoryFromFile
 import common.Consts._
 
-class ImemPortIO extends Module {
+class ImemPortIO extends Bundle {
     val addr = Input(UInt(WORD_LEN.W))
     val inst = Output(UInt(WORD_LEN.W))
 }
