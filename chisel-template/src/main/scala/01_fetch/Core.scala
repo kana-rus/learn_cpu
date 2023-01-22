@@ -6,7 +6,11 @@ import common.Consts._
 
 class Core extends Module {
     val io = IO(new Bundle {
-        val imem = Flipped(new ImemPortIO())
+        // val imem = Flipped(new ImemportIO)
+        val imem = new Bundle {
+            val addr = Output(UInt(WORD_LEN.W))
+            val inst = Input(UInt(WORD_LEN.W))
+        }
 
         val exit = Output(Bool())
     })
@@ -26,7 +30,7 @@ class Core extends Module {
 
 
     // for debug
-    printf(p"pc_reg : 0x${Hexdecimal(pcreg)}\n")
-    printf(p"inst   : 0x${Hexdecimal(inst)}\n")
+    printf(p"pc_reg : 0x${Hexadecimal(pc_reg)}\n")
+    printf(p"inst   : 0x${Hexadecimal(inst)}\n")
     printf("---------\n")
 }
