@@ -11,7 +11,7 @@ import chiseltest._
 */
 class HexTest extends /*FlatSpec*/ AnyFlatSpec with ChiselScalatestTester {
     "mycpu" should "work through hex" in {
-        test(new Top) { c =>
+        test(new CPU) { c =>
             while (!c.io.exit.peekBoolean()) {
                 c.clock.step(1)
             }

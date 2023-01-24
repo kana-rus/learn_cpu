@@ -1,4 +1,4 @@
-package `01_fetch`
+package fetch
 
 import chisel3._
 import chisel3.util._
