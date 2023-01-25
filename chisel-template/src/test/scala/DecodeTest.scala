@@ -1,4 +1,4 @@
-package fetch
+package decode
 
 import chisel3._
 import org.scalatest.flatspec.AnyFlatSpec
@@ -10,7 +10,7 @@ import chiseltest._
     Please use org.scalatest.flatspec.AnyFlatSpec instead.
 */
 class HexTest extends /*FlatSpec*/ AnyFlatSpec with ChiselScalatestTester {
-    "mycpu" should "work through hex" in {
+    "mycpu" should "decode hex" in {
         test(new CPU) { c =>
             while (!c.io.exit.peekBoolean()) {
                 c.clock.step(1)
